@@ -49,10 +49,10 @@
   systemd:
     name: mysql@bootstrap
     state: started
-  when: inventory_hostname in groups['all'][0]
+  when: inventory_hostname == groups['all'][0]
   
 - name: start the rest of the servers 
   systemd:
     name: mysql
     state: started
-  when: inventory_hostname not in groups['all'][0]
+  when: inventory_hostname != groups['all'][0]
