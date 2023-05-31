@@ -1,0 +1,4 @@
+[all]
+hostname ansible_host=172.16.100.200 ansible_port=22
+hostname2 ansible_host=172.16.100.201 ansible_port=22
+hostname3 ansible_host=172.16.100.202 ansible_port=22
