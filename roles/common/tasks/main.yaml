@@ -35,7 +35,8 @@
   set_fact:
     id : "{{ ansible_nodename[-1] }}"
     
-- debug: vars={{ id }}
+- debug:
+    var: id
 
 - name: generate configuration file from template
   template:
