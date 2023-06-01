@@ -22,7 +22,7 @@
     
 - name: enable xtradb 8.0 server
   shell: percona-release setup pxc80
-    arg:
+    args:
       executable: /bin/bash
     
 - name: install percona xtradb cluster
