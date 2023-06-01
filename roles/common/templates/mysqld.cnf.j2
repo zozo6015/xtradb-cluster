@@ -25,7 +25,8 @@ wsrep_provider=/usr/lib/galera4/libgalera_smm.so
 # Cluster connection URL contains IPs of nodes
 #If no IP is found, this implies that a new cluster needs to be created,
 #in order to do that you need to bootstrap this node
-wsrep_cluster_address=gcomm://{% for host in groups['all'] %} {{ hostvars[host].ansible_default_ipv4.address }}{% if not loop.last %},{% endif %}{% endfor %}
+wsrep_cluster_address=gcomm://{% for host in groups['all'] %}{{ hostvars[host].ansible_default_ipv4.address }}{% if not loop.last %},{% endif %}{% endfor %}
+
 pxc-encrypt-cluster-traffic=OFF
 # In order for Galera to work correctly binlog format should be ROW
 binlog_format=ROW
