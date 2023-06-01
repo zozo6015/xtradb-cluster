@@ -12,8 +12,9 @@
     mode: 644
     
 - name: install the downloaded deb file
-  shell:
-    argv: dpkg -i /root/percona-release_latest.generic_all.deb
+  apt:
+    deb: /root/percona-release_latest.generic_all.deb
+    state: present
     
 - name: update apt repository
   apt:
