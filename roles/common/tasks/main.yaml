@@ -13,7 +13,7 @@
     
 - name: install the downloaded deb file
   shell:
-    args: dpkg -i percona-release_latest.generic_all.deb
+    args: dpkg -i /root/percona-release_latest.generic_all.deb
     
 - name: update apt repository
   apt:
