@@ -21,8 +21,9 @@
     update_cache: yes
     
 - name: enable xtradb 8.0 server
-  shell:
-    argv: percona-release setup pxc80
+  shell: percona-release setup pxc80
+    arg:
+      executable: /bin/bash
     
 - name: install percona xtradb cluster
   apt:
