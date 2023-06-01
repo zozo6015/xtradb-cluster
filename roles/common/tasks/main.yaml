@@ -8,7 +8,7 @@
 - name: download the percona xtradb repository deb package
   get_url:
     url: https://repo.percona.com/apt/percona-release_latest.generic_all.deb
-    file: /root/percona-release_latest.generic_all.deb
+    dest: /root/percona-release_latest.generic_all.deb
     mode: 644
     
 - name: install the downloaded deb file
