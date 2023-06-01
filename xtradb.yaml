@@ -1,5 +1,5 @@
 ---
-hosts: all
-user: root
-roles:
-  - common
+- hosts: all
+  user: root
+  roles:
+    - common
