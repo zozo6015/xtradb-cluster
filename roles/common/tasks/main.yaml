@@ -59,4 +59,3 @@
     name: mysql
     state: started
   when: inventory_hostname != groups['all'][0]
-  serial: 1
